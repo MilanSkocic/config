@@ -1,0 +1,6 @@
+# git log --pretty=format:"\`%h <https://www.github.com/MilanSkocic/C_extension_demo/commit/%h>\`_ - %an, %ad : %s" > out.txt
+
+.idea
+
+Pipfile
+Pipfile.lock
