@@ -3,14 +3,14 @@ $ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqli
 
 $ cd /opt
 $ sudo wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
-$ sudo tar xzf Python-3.8.0.tgz
+$ sudo tar -xvf Python-3.8.0.tgz
 
 $ cd Python-3.8.0
 $ sudo ./configure --enable-optimizations
 $ sudo make altinstall
 
-$ update-alternatives --install /usr/bin/python3 python /usr/bin/python3.6 1
-$ update-alternatives --install /usr/bin/python3 python /usr/bin/python3.8 2
+$ update-alternatives --install /usr/bin/python3 python /usr/local/bin/python3.6 1
+$ update-alternatives --install /usr/bin/python3 python /usr/local/bin/python3.8 2
 
 
 $ update-alternatives --list python
@@ -27,3 +27,6 @@ There are 2 choices for the alternative python (providing /usr/bin/python).
   2            /usr/local/bin/python3.8   2         manual mode
 
 Press <enter> to keep the current choice[*], or type selection number:
+
+# create aliases
+alias py39='/usr/local/bin/python3.9'
