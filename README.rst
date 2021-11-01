@@ -22,3 +22,26 @@ Edit the **/etc/sudoers.d/** with the ``visudo`` command othervise it will not w
 ``#visudo``
 
 Change %sudo with john and save.
+
+Debian upgrade
+==================
+Apply updates to the current version.
+
+``sudo apt update ``
+
+``sudo apt upgrade``
+
+``sudo apt full-upgrade``
+
+``sudo apt --purge autoremove``
+
+Modify /etc/apt/sources.list with the adequate version.
+
+``sudo apt update ``
+
+``sudo apt upgrade``
+
+``sudo apt full-upgrade``
+
+``sudo apt --purge autoremove``
+
