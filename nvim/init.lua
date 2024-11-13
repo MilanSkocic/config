@@ -24,7 +24,10 @@ require("lazy").setup({
     {import = "plugins"}
 })
 
-vim.cmd([[colorscheme vscode]])
+vim.cmd([[colorscheme Neosolarized]])
+vim.cmd([[let g:neosolarized_contrast = "high"]])
+vim.cmd([[let g:neosolarized_visibility = "normal"]])
+vim.cmd([[set termguicolors]])
 
 local cmp = require'cmp'
 
@@ -97,6 +100,12 @@ require("nvim-web-devicons").refresh()
 vim.keymap.set('n', '<leader>sub', '/subroutine<CR>', {})
 vim.keymap.set('n', '<leader>def', '/def<CR>', {})
 vim.keymap.set('n', '<leader>cls', '/class<CR>', {})
+
+vim.keymap.set('n', '<leader>l', '10<C-w>>', {})
+vim.keymap.set('n', '<leader>h', '10<C-w><', {})
+vim.keymap.set('n', '<leader>j', '10<C-w>-', {})
+vim.keymap.set('n', '<leader>k', '10<C-w>+', {})
+vim.keymap.set('n', '<leader>=', '10<C-w>=', {})
 
 vim.keymap.set('n', '<leader>n', ':NvimTreeToggle .<CR>', {})
 
