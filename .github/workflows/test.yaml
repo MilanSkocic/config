@@ -1,0 +1,23 @@
+name: test tag
+
+on:
+  push:
+    tags:
+      - "*"
+    
+jobs:
+  details:
+    runs-on: ubuntu-latest
+    outputs:
+      tag_name: {{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Extract tag name
+        id: release
+        run: |
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            TAG_NAME=${GITHUB_REF#refs/tags/}
+          else
+            echo "No tag"
+            exit 1
+          fi
