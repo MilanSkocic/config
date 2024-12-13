@@ -17,6 +17,7 @@ jobs:
         run: |
           if [ "${{ github.ref_type }}" = "tag" ]; then
             TAG_NAME=${GITHUB_REF#refs/tags/}
+            echo "tag_name=$TAG_NAME" >> GITHUB_OUTPUT
           else
             echo "No tag"
             exit 1
