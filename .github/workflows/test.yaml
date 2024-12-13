@@ -1,17 +1,17 @@
-name: test tag
+name: Main
 
 on:
-  release:
-    types: [published]
-    
+  push:
+    tags:
+      - "v*.*.*"
+
 jobs:
-  details:
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Extract tag name
-        id: release
-        run: |
-          echo "Ran after release"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Release
+        uses: softprops/action-gh-release@v2
+      with:
+          files: README.txt
