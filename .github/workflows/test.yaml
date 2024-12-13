@@ -14,4 +14,4 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: README.txt
+          files: README.md
