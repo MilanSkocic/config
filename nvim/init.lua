@@ -24,7 +24,7 @@ require("lazy").setup({
     {import = "plugins"}
 })
 
-vim.cmd([[colorscheme NeoSolarized]])
+vim.cmd([[colorscheme Neosolarized]])
 vim.cmd([[let g:neosolarized_contrast = "high"]])
 vim.cmd([[let g:neosolarized_visibility = "normal"]])
 vim.cmd([[set termguicolors]])
@@ -109,3 +109,4 @@ vim.keymap.set('n', '<leader>=', '10<C-w>=', {})
 
 vim.keymap.set('n', '<leader>n', ':NvimTreeToggle .<CR>', {})
 
+vim.keymap.set('n', '<leader>g', ':LazyGit <CR>', {})
